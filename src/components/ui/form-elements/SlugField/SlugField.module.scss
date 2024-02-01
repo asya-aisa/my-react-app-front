@@ -1,0 +1,15 @@
+.relative {
+	position: relative;
+}
+.badge {
+	text-transform: uppercase;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	cursor: pointer;
+	border-radius: 8px;
+	padding: 2px 8px;
+	border: 1px var(--bg-color-light) solid;
+	font-size: 12px;
+	line-height: 16px;
+}

@@ -1,0 +1,28 @@
+.search {
+	border-radius: 15px;
+	border: 1px var(--color-bright-opacity) solid;
+	padding: 8px 12px;
+	display: flex;
+	align-items: center;
+	z-index: 10;
+
+	svg {
+		fill: aliceblue;
+		margin-right: 2px;
+		font-size: 20px;
+	}
+
+	input {
+		display: block;
+		width: 100%;
+		background-color: transparent;
+		outline: none;
+		border: none;
+	}
+
+	::placeholder {
+		color: aliceblue;
+		font-family: 'Roboto', sans-serif;
+	}
+
+}

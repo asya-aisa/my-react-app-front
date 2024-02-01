@@ -1,0 +1,21 @@
+.label {
+	display: flex;
+	flex-direction: column;
+}
+.inputUpload {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.placeholder {
+	opacity: 0.7;
+}
+
+.img {
+	object-fit: cover;
+	object-position: top;
+}
+.error {
+	color: var(--bg-color-bright);
+}
+

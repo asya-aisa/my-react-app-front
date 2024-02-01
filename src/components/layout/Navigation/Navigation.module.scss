@@ -1,0 +1,40 @@
+.navigation {
+	padding-top: 1%;
+
+	hr {
+		width: 80%;
+		opacity: 0.3;
+	}
+}
+
+ul {
+	list-style: none;
+	padding: 0 20px 0 20px;
+
+	li {
+		margin-bottom: 40px;
+		padding: 8px 0 8px 15px;
+		border-radius: 10px;
+
+		a {
+			display: flex;
+			align-items: center;
+			color: aliceblue;
+			text-decoration: none;
+
+			span {
+				font-size: 17px;
+				margin-left: 15px;
+			}
+
+			svg {
+				font-size: 20px;
+			}
+		}
+		&:hover,
+		&.active {
+			background-color: var(--bg-color-light);
+			cursor: pointer;
+		}
+	}
+}

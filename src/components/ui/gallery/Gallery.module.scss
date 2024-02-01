@@ -1,0 +1,74 @@
+@import '../../../assets/styles/_variables.scss';
+
+.gallery {
+	display: flex;
+	align-items: center;
+	overflow-x: auto;
+	flex-wrap: nowrap;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	-webkit-overflow-scrolling: touch;
+
+	&::-webkit-scrollbar {
+		border-radius: 10px;
+		background-color: var(--bg-color-light);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background-color: var(--bg-color-bright);
+
+		&:hover {
+			background-color: var(--bg-color-dark);
+		}
+	}
+}
+
+.item {
+	position: relative;
+	transition: transform ease-in-out 200ms;
+	display: flex;
+	align-items: flex-end;
+	border-radius: 13px;
+	overflow: hidden;
+	flex: 0 0 auto;
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+
+	&.vertical {
+		margin-right: 16px;
+		max-width: 200px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&.horizontal {
+		margin-bottom: 32px;
+		width: 31%;
+		height: 176px;
+	}
+}
+.text {
+	@include fade-bg-gradient(0deg);
+
+	&::before {
+		border-radius: 13px;
+	}
+}
+
+.content {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	.title {
+		font-weight: 600;
+		margin-bottom: 12px;
+		color: aliceblue;
+	}
+}

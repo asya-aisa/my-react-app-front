@@ -1,0 +1,88 @@
+@import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+
+/* dark */
+
+html[data-theme='dark'] {
+
+	--bg-color-cont: 	rgb(19, 18, 18, 0.9);
+	--bg-color-nav-sidebar: rgba(24, 18, 21, 0.6);
+	
+	--bg-color-light: 	rgba(73, 70, 71, 0.7);
+	--bg-color-bright: #7a0931;
+	--bg-color-dark: #51041e;
+
+
+	--color-bright-opacity:	rgba(46, 3, 18, 0.5);
+	--color-dark-opacity: rgba(37, 2, 17, 0.3);
+
+	--light-pink: rgba(149, 138, 146, 0.5);
+}
+
+/* light */
+
+html[data-theme='light'] {
+
+	--bg-color-cont: 	rgba(122,73,94,0.5);
+	--bg-color-nav-sidebar: rgba(122,73,94,0.6);
+
+	--bg-color-light: 	rgba(181,110,135,0.85);
+	--bg-color-bright: #e22366;
+	--bg-color-dark: #830a34;
+
+
+	--color-bright-opacity:	rgba(254,13,98,0.5);
+	--color-dark-opacity: rgba(92, 2, 41, 0.3);
+
+	--light-pink: rgb(240, 209, 233, 0.5);
+
+}
+
+body {
+	background-image: url('/images/online-cinema.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: aliceblue;
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+
+	@media (max-width: 630px) {
+		height: 100vh;
+		background-position: center;
+	}
+}
+
+
+.heading {
+	opacity: 0.9;
+	font-weight: 500;
+}
+
+.skeleton {
+	border-radius: 3px;
+}
+
+/* Slide animation */
+.slide-animation-enter {
+	opacity: 0;
+	transform: scale(0.9);
+}
+.slide-animation-enter-active {
+	opacity: 1;
+	transform: translateX(0);
+	transition: opacity 300ms, transform 300ms;
+}
+.slide-animation-exit {
+	opacity: 1;
+}
+.slide-animation-exit-active {
+	opacity: 0;
+	transform: scale(0.9);
+	transition: opacity 300ms, transform 300ms;
+}
+

@@ -1,0 +1,60 @@
+@import 'src/assets/styles/variables';
+
+$bar-width: 20%;
+
+.layout {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+	>div:first-child{
+		position: relative;
+		border: 2px var(--bg-color-cont) solid;
+		width: 80%;
+		height: 70%;
+		border-radius: 25px;
+		background-color: var(--bg-color-cont);
+		backdrop-filter: blur(25px);
+		
+	
+
+		>div:first-child{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: $bar-width;
+			max-width: 200px;
+			background-color: var(--bg-color-nav-sidebar);
+			border-bottom-left-radius: 25px;
+			border-top-left-radius: 25px;
+		}
+
+		.center {
+			position: absolute;
+			left: 21%;
+			bottom: 0;
+			top: 20%;
+			height: 80%;
+			width: 50%;
+		}
+
+		>div:last-child {
+			position: absolute;
+			right: 3%;
+			top: 20%;
+			bottom: 4%;
+			width: 24%;
+			max-width: 300px;
+			border-radius: 15px;
+			background-color: var(--bg-color-nav-sidebar);
+		}
+
+
+	}
+
+
+}

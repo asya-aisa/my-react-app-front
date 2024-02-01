@@ -1,0 +1,42 @@
+.wrapper {
+	margin-top: 35px;
+
+	form {
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+		border-radius:  13px;
+		background-color: var(--bg-color-light);
+		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.5);
+		padding: 28px;
+		text-align: center;
+
+		.buttons {
+			margin-top: 48px;
+			box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+				:first-child {
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+
+				:last-child {
+					opacity: 0.7;
+					background-color: var(--bg-color-dark);
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+
+					&:hover {
+						opacity: 1;
+						transition: opacity ease-in-out 200ms;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+	}

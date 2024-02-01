@@ -1,0 +1,60 @@
+@import '../../../../assets/styles/_animations.scss';
+
+.wrapper {
+	position: relative;
+
+	button {
+		background-color: transparent;
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+
+	> button {
+		font-size: 30px;
+	}
+
+	.menu {
+		position: absolute;
+		right: 0;
+		z-index: 1;
+		background-color: var(--bg-color-light);
+		padding: 10px 12px;
+		font-size: 18px;
+		border-radius: 10px 0 10px 10px;
+		min-width: 116px;
+		display: none;
+		animation: opacity 0.4s;
+
+		&.show {
+			display: block;
+		}
+
+		> ul {
+			list-style: none;
+			padding: 0;
+
+			.li {
+				padding: 0;
+				margin: 15%;
+			}
+
+			button {
+				font-size: 18px;
+				font-weight: 600;
+			}
+
+			a {
+				text-decoration: none;
+				transition: color 0.2s ease;
+				font-weight: 600;
+
+				&:hover,
+				&.active {
+					color: var(--bg-color-light);
+					margin: 4px 0;
+				}
+			}
+		}
+	}
+}
