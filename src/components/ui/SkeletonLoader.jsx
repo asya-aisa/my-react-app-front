@@ -1,4 +1,3 @@
-import cn from 'clsx'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { useTheme } from '../../hooks/useTheme'

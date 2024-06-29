@@ -5,6 +5,22 @@
 .inputUpload {
 	margin-top: 15px;
 	margin-bottom: 15px;
+	font-size: 12px;
+
+	&::file-selector-button {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 14px;
+		padding-right: 14px;
+		background-color: var(--bg-color-dark);
+		border-radius: 13px;
+		border: none;
+		font-size: 12px;
+		line-height: 20px;
+		color: aliceblue;
+		transition: opacity ease-in-out 200ms;
+		cursor: pointer;
+	}
 }
 
 .placeholder {
@@ -12,10 +28,10 @@
 }
 
 .img {
-	object-fit: cover;
 	object-position: top;
+	object-fit: cover;
 }
+
 .error {
 	color: var(--bg-color-bright);
 }
-

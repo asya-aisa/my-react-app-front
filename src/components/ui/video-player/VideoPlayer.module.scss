@@ -36,6 +36,7 @@
 				transition: opacity ease-in-out 200ms;
 				background-color: transparent;
 				border: none;
+				color: aliceblue;
 
 				&:hover {
 					opacity: 1;
@@ -80,6 +81,7 @@
 				border: none;
 				background: none;
 				transition: opacity ease-in-out 200ms;
+				color: aliceblue;
 
 				&:hover {
 					opacity: 1;
@@ -95,6 +97,7 @@
 		right: 16px;
 		bottom: 33px;
 		background-color: aliceblue;
+		
 		border-radius: 13px;
 		height: 4px;
 		width: calc(100% - 2rem);

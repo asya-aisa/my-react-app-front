@@ -6,6 +6,7 @@ import MaterialIcon from '../../ui/MaterialIcon'
 const MenuItem = ({ item }) => {
 	const { pathname } = useLocation()
 
+
 	return (
 		<li
 			className={cn({

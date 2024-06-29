@@ -48,6 +48,7 @@ export const checkAuth = createAsyncThunk(
 		try {
 			const response = await AuthService.getNewTokens()
 			return response.data
+			
 		} catch (error) {
 			if (errorCatch(error) === 'jwt expired') {
 				toastr.error(

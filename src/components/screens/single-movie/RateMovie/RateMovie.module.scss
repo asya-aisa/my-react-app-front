@@ -1,0 +1,44 @@
+.wrapper {
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 13px;
+	background-color: var(--bg-color-light);
+	color: #fff;
+	text-align: center;
+
+	h3 {
+		font-size: 15px;
+		font-weight: 600;
+	}
+
+	div {
+		font-size: 20px;
+		line-height: 5px;
+		opacity: 0.9;
+		margin-bottom: 10px;
+	}
+
+	@keyframes scaleIn {
+		0% {
+			opacity: 0;
+			transform: scale(0.9);
+		}
+		50% {
+			opacity: 0.3;
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	.thanks {
+		color: yellow;
+		font-size:15px;
+		line-height: 5px;
+		font-weight: 600;
+		animation: scaleIn .35s ease-in-out;
+	}
+}
+

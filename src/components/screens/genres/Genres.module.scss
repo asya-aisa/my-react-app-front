@@ -1,0 +1,94 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/_animations';
+
+$shadow: 0 10px 10px 0 rgb(0 0 0 / 15%), 0 6px 6px 0 rgb(0 0 0 / 15%),
+	0 3px 3px 0 rgb(0 0 0 / 15%);
+
+	.description {
+		font-size: 15px;
+		line-height: 28px;
+		font-weight: 300;
+		opacity: 0.6;
+	}
+
+.collections {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+
+	> a {
+		margin-top: 30px;
+		margin-right: 20px;
+		text-decoration: none;
+		color: aliceblue;
+		animation: opacity 0.5s ease-in-out;
+
+		&:nth-child(3n) {
+			margin-right: 0px;
+		}
+	}
+
+	.collection {
+		width: 44%;
+		position: relative;
+		height: 176px;
+		display: flex;
+		align-items: flex-end;
+		transition: transform ease-in-out 200ms;
+
+		@include fade-bg-gradient(0deg);
+		&::before {
+			border-radius: 13px;
+		}
+
+		.img {
+			border-radius: 13px;
+			height: 100%;
+			width: 100%;
+			margin: 0px;
+			box-shadow: $shadow;
+		}
+
+		.behind {
+			position: absolute;
+			height: 100%;
+			z-index: -2;
+		}
+
+		.second {
+			top: -8.5px;
+			scale: 0.95;
+			opacity: 0.6;
+		}
+
+		.third {
+			top: -16.5px;
+			scale: 0.9;
+			opacity: 0.4;
+		}
+
+		&:hover {
+			transform: translateY(-6px);
+			transform: translate, rotate(), skewX(), skewY(), scaleX(), scaleY();
+
+			.behind {
+				&.second {
+					transform: translateY(0px);
+				}
+
+				&.third {
+					transform: translateY(0px);
+				}
+			}
+		}
+	}
+	.content {
+		position: absolute;
+		z-index: 2;
+		text-align: center;
+		width: 100%;
+		font-weight: 600;
+		margin-bottom: 4px;
+	}
+}

@@ -16,6 +16,14 @@ const AuthItems = () => {
 							title: 'Profile',
 						}}
 					/>
+
+					<MenuItem
+						item={{
+							icon: 'MdFavorite',
+							link: '/favorites',
+							title: 'Favorites',
+						}}
+					/>
 					<LogoutButton />
 				</>
 			) : (
@@ -26,7 +34,7 @@ const AuthItems = () => {
 				<MenuItem
 					item={{
 						icon: 'MdOutlineLock',
-						link: '/manage',
+						link: '/manage/movies',
 						title: 'Admin panel',
 					}}
 				/>

@@ -13,7 +13,7 @@ const GalleryItem = ({ item, variant }) => {
 		>
 
 			<img
-				alt={item.title}
+				alt={item.name}
 				src={`${import.meta.env.VITE_SERVER_URL}${item.posterPath}`}
 				className={styles.img}
 			/>

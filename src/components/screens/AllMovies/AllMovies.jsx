@@ -3,6 +3,7 @@ import { MovieService } from '../../../services/movie.service'
 import Layout from '../../layout/Layout'
 import Gallery from '../../ui/gallery/Gallery'
 import SkeletonLoader from '../../ui/SkeletonLoader'
+import Heading from '../../ui/heading/Heading'
 
 
 const AllMovies = () => {
@@ -22,6 +23,7 @@ const AllMovies = () => {
 	return (
 		<>
 		<Layout>
+		<Heading title='All Movies' style={{fontSize: '25px'}} />
 			{isLoading ? <SkeletonLoader count={1} height={176} /> : <Gallery items={movies} />}
 		</Layout>
 	</>

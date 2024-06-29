@@ -1,0 +1,33 @@
+.button {
+	position: absolute;
+	right: 0;
+	bottom: 80;
+	padding-top: 32px;
+	background-repeat: no-repeat;
+	width: 96px;
+	height: 64px;
+	background-position: left;
+	margin-left: auto;
+  margin-right: auto;
+	background-color: transparent;
+	background-size: 2900%;
+	border: none;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.animate {
+	animation: heart-burst 0.8s steps(28) forwards;
+}
+
+@keyframes heart-burst {
+	0% {
+		background-position: left;
+	}
+
+	100% {
+		background-position: right;
+	}
+}

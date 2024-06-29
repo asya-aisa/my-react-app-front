@@ -23,10 +23,21 @@
 	}
 
 	&.left {
-		right: 96px;
+		@media (min-width: 930px) {
+			right: 96px;
+		}
+
+		@media (max-width: 630px) {
+			bottom: 15%;
+			left: 0;
+		}
 	}
 
 	&.right {
 		right: 32px;
+		@media (max-width: 630px) {
+			right: 0;
+			bottom: 15%;
+		}
 	}
 }

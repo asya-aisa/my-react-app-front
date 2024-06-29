@@ -1,0 +1,13 @@
+.hamburger {
+	width: 180px;
+	height: 150px;
+	position: absolute;
+	top: 15%;
+	right: -250px;
+	transition: right 0.7s ease-in-out;
+	z-index: 100;
+
+	&.show {
+		right: 20px;
+	}
+}

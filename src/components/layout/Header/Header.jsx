@@ -1,9 +1,10 @@
 import ReactSwitch from 'react-switch'
 import { useTheme } from '../../../hooks/useTheme'
-import Heading from '../../ui/Heading'
+
 import styles from './Header.module.scss'
 import Logo from './Logo'
 import Search from './Search/Search'
+import Heading from '../../ui/heading/Heading'
 
 export const Header = ({title = 'Kinoteka', style}) => {
 	const { theme, setTheme, checked, setChecked } = useTheme()

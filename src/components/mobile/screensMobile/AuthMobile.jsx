@@ -4,10 +4,11 @@ import { useAuthRedirect } from '../../screens/auth/useAuthRedirect'
 import { useAuth } from '../../../hooks/useAuth'
 import { useActions } from '../../../hooks/useActions'
 import LayoutMobile from '../layoutMobile/LayoutMobile'
-import Heading from '../../ui/Heading'
+
 import AuthFields from '../../screens/auth/AuthFields'
 import Button from '../../ui/form-elements/Button'
 import styles from '../../../components/screens/auth/Auth.module.scss'
+import Heading from '../../ui/heading/Heading'
 
 const AuthMobile = () => {
 	useAuthRedirect()

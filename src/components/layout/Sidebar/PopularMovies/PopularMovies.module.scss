@@ -22,14 +22,13 @@
 
 	.item {
 		display: flex;
-		/* align-items: stretch; */
+		align-items: stretch;
 
 		a {
 			img {
 				border-radius: 5px;
 				border: 1px solid transparent !important;
 				object-position: top;
-				object-fit: cover;
 			}
 
 			&:hover {
@@ -43,8 +42,10 @@
 			margin-left: 16px;
 			display: flex;
 			flex-direction: column;
-			/* justify-content: space-between; */
+			justify-content: space-between;
 			width: 67%;
+		height: 105px;
+
 
 			.title {
 				font-size: 20px;
@@ -58,6 +59,21 @@
 				font-size: 12px;
 				color: var(--light-pink);
 				margin-top: 5px;
+			}
+			.rating {
+				display: flex;
+				align-items: center;
+
+				svg {
+					color: yellow;
+					margin-right: 8px;
+					font-size: 18px;
+					line-height: 28px;
+				}
+
+				span {
+					font-weight: 500;
+				}
 			}
 		}
 	}

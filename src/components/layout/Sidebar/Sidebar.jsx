@@ -1,4 +1,5 @@
-import Heading from '../../ui/Heading'
+
+import Heading from '../../ui/heading/Heading'
 import PopularMovies from './PopularMovies/PopularMovies'
 import styles from './Sidebar.module.scss'
 

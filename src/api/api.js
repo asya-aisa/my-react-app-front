@@ -6,8 +6,6 @@ import { errorCatch, getContentType } from './api.helpers'
 
 const API_URL = `${import.meta.env.VITE_SERVER_URL}/api`
 
-
-
 export const axiosClassic = axios.create({
 	baseURL: API_URL,
 	headers: getContentType(),

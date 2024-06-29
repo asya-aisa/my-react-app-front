@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
-import { getMovieUrl } from '../../../../url'
+
+import { getMovieUrl } from '../../../../configs/url'
 import { getGenresListEach } from '../../../../utils/movie/getGenresList'
 import styles from './PopularMovies.module.scss'
+import MaterialIcon from '../../../ui/MaterialIcon'
 
 const MovieItem = ({ movie }) => {
 	return (
@@ -22,6 +24,11 @@ const MovieItem = ({ movie }) => {
 							{getGenresListEach(idx, movie.genres.length, genre.name)}
 						</span>
 					))}
+				</div>
+
+				<div className={styles.rating}>
+					<MaterialIcon name="MdStarRate" />
+					<span>{movie.rating.toFixed(1)}</span>
 				</div>
 			</div>
 		</div>

@@ -1,25 +1,32 @@
 @import 'src/assets/styles/animations';
 
 .button {
-	transition: background-color 0.3s ease-in-out;;
+	transition: background-color 0.3s ease-in-out;
 	background-color: var(--bg-color-bright);
 	padding: 8px 40px;
 	border-radius: 10px;
-	transition: background-color .3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;
 	border: none;
 
 	&:hover {
 		cursor: pointer;
 		background-color: var(--bg-color-dark);
 	}
+
+	@media (max-width: 630px) {
+		padding: 5px 10px;
+		border-radius: 9px;
+		font-size: 20px;
+	}
 }
 
 .common {
 	position: relative;
 	border-bottom: 1px var(--light-pink) solid;
-	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: ease-in-out;
-  transition-duration: 200ms;
+	transition-property: color, background-color, border-color,
+		text-decoration-color, fill, stroke;
+	transition-timing-function: ease-in-out;
+	transition-duration: 200ms;
 
 	&:focus-within {
 		border-color: var(--bg-color-bright);
@@ -65,11 +72,50 @@
 	color: var(--bg-color-bright);
 }
 
-
 img {
 	object-position: center;
-  object-fit: cover;
-  pointer-events: none;
+	object-fit: cover;
+	pointer-events: none;
 	border-radius: 6px;
 	margin-bottom: 15px;
+}
+
+.editorWrapper {
+	border: none;
+}
+
+.toolbar {
+	margin-top: 16px;
+	outline: none !important;
+	border: none !important;
+	border-top-left-radius: 8px !important;
+	border-top-right-radius: 8px !important;
+	background-color: var(--light-pink) !important;
+
+	div {
+		div {
+			outline: none;
+			border: none;
+			transition-property: color, background-color, border-color,
+				text-decoration-color, fill, stroke;
+			transition-timing-function: ease-in-out;
+			transition-duration: 200ms;
+			background: var(--bg-color-light);
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+}
+.editor {
+	border-width: 1px;
+	border: 1px solid grey;
+	margin-bottom: 5px;
+	padding-left: 16px;
+	padding-right: 16px;
+	overflow: hidden;
+	color: aliceblue;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
 }

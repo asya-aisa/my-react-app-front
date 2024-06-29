@@ -1,0 +1,102 @@
+// React Select
+.custom-select {
+	&__control {
+		background-color: transparent !important;
+		border: none !important;
+		border-radius: 0 !important;
+		border-bottom: 1px solid var(--light-pink) !important;
+		box-shadow: none !important;
+
+		&--menu-is-open {
+			border-color: var(--bg-color-bright) !important;
+		}
+	}
+
+	&__value-container {
+		padding: 0 !important;
+		cursor: text !important;
+	}
+
+	&__input-container {
+		color: aliceblue !important;
+	}
+
+	&__indicator-separator {
+		display: none !important;
+		
+	}
+
+	&__indicators {
+		cursor: pointer !important;
+		
+	}
+
+	&__indicator {
+		color: var(--light-pink) !important;
+
+		&:hover {
+			color: var(--bg-color-light) !important;
+		}
+	}
+
+	&__multi-value {
+		background-color: rgba(var(--light-pink), 0.6) !important;
+		border-radius: 0.5rem !important;
+	}
+
+	&__multi-value__label {
+		font-size: 80% !important;
+		color: rgba(white, 0.7) !important;
+	}
+
+	&__multi-value__remove {
+		color: rgba(white, 0.8) !important;
+		cursor: pointer;
+
+		&:hover {
+			background-color: transparent !important;
+			color: rgba(white, 1) !important;
+		}
+	}
+
+	&__menu {
+		background-color: var(--bg-color-dark) !important;
+		color: rgba(white, 0.6) !important;
+	}
+
+	&__option {
+		cursor: pointer !important;
+		&--is-focused {
+			background-color: var(--bg-color-light)!important;
+		}
+	}
+
+	&-container {
+		> div {
+			outline: none !important;
+			box-shadow: none !important;
+		}
+
+		.form-control__control {
+			outline: none;
+			border: none;
+			transition-property: all;
+			transition-timing-function: ease-in-out;
+			transition-duration: 200ms;
+			box-shadow: none !important;
+		}
+
+		&:hover,
+		&--menu-is-open {
+			border-color: aliceblue !important;
+		}
+
+		.form-control__indicators {
+			cursor: pointer;
+		}
+	}
+
+	&__menu {
+	//animate
+	}
+}

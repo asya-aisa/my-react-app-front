@@ -2,43 +2,53 @@ import { useMutation, useQuery } from '@tanstack/react-query'
 import { useEffect } from 'react'
 import { toastr } from 'react-redux-toastr'
 import { useNavigate, useParams } from 'react-router-dom'
-import { MovieService } from '../../../../services/movie.service'
+import { GenreService } from '../../../../services/genre.service'
 import { getKeys } from '../../../../utils/object/getKeys'
 import { toastError } from '../../../../utils/toast-error'
 
-export const useMovieEdit = setValue => {
+export const useGenreEdit = setValue => {
 	const nav = useNavigate()
 
 	const { id } = useParams()
+
+	// const id = String(id)
 
 	const {
 		data: queryData,
 		isLoading,
 		isSuccess,
+		error,
 	} = useQuery({
-		queryKey: ['movie', id],
-		queryFn: () => MovieService.getById(id),
+		queryKey: ['genre', id],
+		queryFn: () => GenreService.getById(id),
+		select: ({ data }) => data,
 		enabled: !!id,
 	})
 
 	useEffect(() => {
-		if(!isSuccess) return
+		if (!isSuccess) return
 
-		if (isSuccess)
-			getKeys(queryData.data).forEach(key => {
-				setValue(key, queryData.data[key])
+		// if (isSuccess)
+			getKeys(queryData).forEach(key => {
+				setValue(key, queryData[key])
 			})
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [queryData, isSuccess])
 
+	useEffect(() => {
+		if (error) toastError(error, 'Get genre')
+	}, [error])
+
 	const { mutateAsync } = useMutation({
-		mutationKey: ['update movie'],
-		mutationFn: data => MovieService.update(id, data),
+		mutationKey: ['update genre'],
+		mutationFn: data => GenreService.update(id, data),
 		onError(error) {
-			toastError(error, 'Update movie')
+			toastError(error, 'Update genre')
 		},
 		onSuccess() {
-			toastr.success('Update movie', 'update was successful')
-			nav('/manage')
+			toastr.success('Update genre', 'update was successful')
+			nav('/manage/genres')
 		},
 	})
 

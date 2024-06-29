@@ -1,6 +1,8 @@
 import Field from '../../ui/form-elements/Field'
 
-const AuthFields = ({ register, formState: { errors } }) => {
+const AuthFields = ({ register, watch,  formState: { errors } }) => {
+	const mail = watch('email')
+	console.log(mail)
 	return (
 		<>
 			<Field

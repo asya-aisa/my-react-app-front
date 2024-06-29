@@ -1,6 +1,5 @@
 import { useActions } from '../../../hooks/useActions'
 import MaterialIcon from '../../ui/MaterialIcon'
-import styles from './Navigation.module.scss'
 
 const LogoutButton = () => {
 	const { logout } = useActions()

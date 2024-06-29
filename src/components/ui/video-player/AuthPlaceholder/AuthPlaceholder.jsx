@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import styles from './AuthPlaceholder.module.scss'
+import Button from '../../form-elements/Button'
 
 const AuthPlaceholder = () => {
 	const nav = useNavigate()
@@ -8,7 +9,7 @@ const AuthPlaceholder = () => {
 		<div className={styles.placeholder}>
 			<div>
 				<div>You must be logged in to start watching</div>
-				<button onClick={() => nav('/auth')}>Sign in</button>
+				<Button onClick={() => nav('/auth')}>Sign in</Button>
 			</div>
 		</div>
 	)

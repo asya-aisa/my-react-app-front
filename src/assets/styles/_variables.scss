@@ -5,7 +5,7 @@ $bg-nav-color: var(--bg-nav-left-color);
 $font-color: var(--font-color);
 
 $default-font: 'Roboto', sans-serif;
-$mobile: 480px;
+//$mobile: 480px;
 
 @mixin fade-bg-gradient($direction: 90deg) {
 	&::before {

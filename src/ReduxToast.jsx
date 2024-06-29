@@ -1,12 +1,15 @@
-import ReduxToastrLib from 'react-redux-toastr'
+import ReduxToastr from 'react-redux-toastr'
 
 const ReduxToast = () => {
 	return (
-		<ReduxToastrLib
+		<ReduxToastr
+			timeOut={1000}
 			newestOnTop={false}
 			preventDuplicates
 			closeOnToastrClick
 			transitionIn='fadeIn'
+			transitionOut='fadeOut'
+			progressBar
 		/>
 	)
 }

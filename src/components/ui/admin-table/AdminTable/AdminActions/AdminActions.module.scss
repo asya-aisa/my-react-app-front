@@ -1,0 +1,23 @@
+.actions {
+	display: flex;
+	align-items: center;
+
+	> button {
+		color: var(--bg-color-bright);
+
+		&:first-child {
+			margin-right: 16px;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	button {
+		outline: none;
+		border: none;
+		background-color: transparent;
+		padding: 0;
+	}
+}

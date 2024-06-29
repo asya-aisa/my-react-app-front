@@ -1,13 +1,16 @@
 import { Controller, useForm } from 'react-hook-form'
 import generateSlug from '../../../../utils/string/generateSlug'
 import Layout from '../../../layout/Layout'
-import Heading from '../../../ui/Heading'
 import SkeletonLoader from '../../../ui/SkeletonLoader'
 import Button from '../../../ui/form-elements/Button'
 import Field from '../../../ui/form-elements/Field'
 import SlugField from '../../../ui/form-elements/SlugField/SlugField'
 import UploadField from '../../../ui/form-elements/UploadField/UploadField'
+import Heading from '../../../ui/heading/Heading'
+import Select from '../../../ui/select/Select'
 import formStyles from '../adminForm.module.scss'
+import { useAdminActors } from './useAdminActors'
+import { useAdminGenres } from './useAdminGenres'
 import { useMovieEdit } from './useMovieEdit'
 
 const MovieEdit = () => {
@@ -23,6 +26,9 @@ const MovieEdit = () => {
 	})
 
 	const { onSubmit, isLoading } = useMovieEdit(setValue)
+
+	const { data: actors, isLoading: isActorsLoading } = useAdminActors()
+	const { data: genres, isLoading: isGenresLoading } = useAdminGenres()
 
 	return (
 		<Layout>
@@ -77,6 +83,42 @@ const MovieEdit = () => {
 							placeholder='Year'
 							error={errors.parameters?.year}
 							style={{ width: '31%' }}
+						/>
+
+						<Controller
+							name='genres'
+							control={control}
+							render={({ field, fieldState: { error } }) => (
+								<Select
+									field={field}
+									options={genres || []}
+									placeholder='Genres'
+									error={error}
+									isLoading={isGenresLoading}
+									isMulti
+								/>
+							)}
+							rules={{
+								required: 'Please select at least one genre!',
+							}}
+						/>
+
+						<Controller
+							name='actors'
+							control={control}
+							render={({ field, fieldState: { error } }) => (
+								<Select
+									field={field}
+									options={actors || []}
+									placeholder='Actors'
+									error={error}
+									isLoading={isActorsLoading}
+									isMulti
+								/>
+							)}
+							rules={{
+								required: 'Please select at least one actor!',
+							}}
 						/>
 
 						<Controller

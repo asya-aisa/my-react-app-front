@@ -2,7 +2,8 @@ import ReactSwitch from 'react-switch'
 import { useTheme } from '../../../../hooks/useTheme'
 import Logo from '../../../layout/Header/Logo'
 import Search from '../../../layout/Header/Search/Search'
-import Heading from '../../../ui/Heading'
+
+import Heading from '../../../ui/heading/Heading'
 import Hamburger from '../hamburger/Hamburger'
 import styles from './HeaderMobile.module.scss'
 

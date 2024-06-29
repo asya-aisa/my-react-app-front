@@ -1,0 +1,16 @@
+.selectContainer {
+	position: relative;
+	margin-bottom: 32px;
+
+	label {
+		display: block;
+
+		span {
+			font-size: 12px;
+			line-height: 16px;
+			text-transform: uppercase;
+			display: block;
+			margin-bottom: 4px;
+		}
+	}
+}

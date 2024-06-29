@@ -2,13 +2,14 @@ import { useMutation, useQuery } from '@tanstack/react-query'
 import { useMemo, useState } from 'react'
 import { toastr } from 'react-redux-toastr'
 import { useNavigate } from 'react-router-dom'
+import { getAdminUrl } from '../../../../configs/url'
 import { useDebounce } from '../../../../hooks/useDebounce'
 import { MovieService } from '../../../../services/movie.service'
+import { getGenresList } from '../../../../utils/movie/getGenresList'
 import { toastError } from '../../../../utils/toast-error'
 
 export const useMovies = () => {
 	const [searchTerm, setSearchTerm] = useState('')
-
 	const debouncedSearch = useDebounce(searchTerm, 500)
 
 	const nav = useNavigate()
@@ -19,8 +20,8 @@ export const useMovies = () => {
 		select: ({ data }) =>
 			data.map(movie => ({
 				_id: movie._id,
-				editUrl: `/manage/movie/edit/${movie._id}`,
-				title: movie.title,
+				editUrl: getAdminUrl(`movie/edit/${movie._id}`),
+				items: [movie.title, getGenresList(movie.genres), String(movie.rating)],
 			})),
 	})
 
